@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3e291a"
+    android:padding="24dp">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvTitleRiad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riad Dar El Fassi"
+        android:textColor="#F6EDE4"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Merci -->
+    <TextView
+        android:id="@+id/tvMerci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Merci pour votre\ncommande"
+        android:textColor="#F6EDE4"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleRiad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/ivRiadPayment"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/riad2"
+        app:layout_constraintTop_toBottomOf="@id/tvMerci"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Texte info -->
+    <TextView
+        android:id="@+id/tvInfoPaiement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Le paiement se fera sur place à votre arrivée."
+        android:textAlignment="center"
+        android:textColor="#F6EDE4"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/ivRiadPayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Bouton retour -->
+    <Button
+        android:id="@+id/btnBackHome"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Retour à l’accueil"
+        android:textAllCaps="false"
+        android:textColor="#9B4922"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoPaiement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

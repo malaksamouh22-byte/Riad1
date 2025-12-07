@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="#F6EDE4"
+    android:layout_marginBottom="8dp">
+
+    <!-- Image du 1er plat de la réservation -->
+    <ImageView
+        android:id="@+id/ivDishHistory"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tajine"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Textes -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <!-- Titre de la carte : Réservation X -->
+        <TextView
+            android:id="@+id/tvDishNameHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Réservation 1"
+            android:textStyle="bold"
+            android:textColor="#b96e47"
+            android:textSize="16sp" />
+
+        <!-- Liste des plats de cette réservation (nom + quantité × prix) -->
+        <TextView
+            android:id="@+id/tvDishInfoHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tajine × 2 — 30€"
+            android:textColor="#b96e47"
+            android:textSize="14sp" />
+
+        <!-- Total de la réservation -->
+        <TextView
+            android:id="@+id/tvReservationHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total : 60€"
+            android:textColor="#b96e47"
+            android:textSize="13sp" />
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvDateHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24/11/2024 20:15"
+            android:textColor="#b96e47"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

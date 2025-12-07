@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#EFD8C0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Bienvenue au Riad Dar El Fassi"
+        android:textAlignment="center"
+        android:textColor="#9B4922"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:src="@drawable/baseline_menu_24"
+        android:contentDescription="@string/menu_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#3D3B3B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMenu" />
+
+    <ImageView
+        android:id="@+id/ivRiad"
+        android:layout_width="339dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="136dp"
+        android:contentDescription="Photo du Riad"
+        android:scaleType="centerCrop"
+        android:src="@drawable/riad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+    <!--  Nouveau champ : numéro de réservation -->
+    <EditText
+        android:id="@+id/etReservationNumber"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:hint="Numéro de réservation"
+        android:padding="12dp"
+        android:textColor="#9B4922"
+        android:textColorHint="#9B4922"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@null"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/ivRiad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:enabled="false"
+        android:focusable="false"
+        android:cursorVisible="false"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Reserver une table"
+        android:textAllCaps="true"
+        android:textColor="#9B4922"
+        android:backgroundTint="@null"
+        app:layout_constraintTop_toBottomOf="@id/etReservationNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnHistory"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@null"
+        android:text="Historique des commandes"
+        android:textColor="#9B4922"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEnter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

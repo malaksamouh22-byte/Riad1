@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="#F6EDE4"
+    android:layout_marginBottom="12dp">
+
+    <!-- IMAGE DU PLAT -->
+    <ImageView
+        android:id="@+id/ivDish"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tajine"
+        android:contentDescription="@string/app_name" />
+
+    <!-- TEXTE + BOUTONS -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <!-- Nom du plat -->
+        <TextView
+            android:id="@+id/tvDishName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom du plat"
+            android:textStyle="bold"
+            android:textColor="#b96e47"
+            android:textSize="16sp" />
+
+        <!-- Info prix -->
+        <TextView
+            android:id="@+id/tvDishInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 × 30€"
+            android:textColor="#b96e47"
+            android:textSize="14sp" />
+
+        <!-- LIGNE :  -   quantité   +  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- BOUTON - -->
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="-"
+                android:textSize="18sp"
+                android:textColor="#F6EDE4"
+                android:background="#C97A40"
+                android:padding="0dp" />
+
+            <!-- QUANTITÉ -->
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp"
+                android:textColor="#b96e47"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <!-- BOUTON + -->
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:textColor="#F6EDE4"
+                android:background="#C97A40"
+                android:padding="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
